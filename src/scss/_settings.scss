@@ -1,11 +1,89 @@
-html {
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-size: inherit;
+//   font-weight: 400;
+// }
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
 
 .page {
@@ -72,4 +150,79 @@ a {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.main-title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: var(--color-ebony);
+  font-weight: 700;
+  text-transform: uppercase;
+  span {
+    color: var(--color-primary);
+  }
+
+  &--home {
+    color: var(--color-light);
+  }
+}
+
+.main-descr {
+  line-height: 150%;
+  font-size: 20px;
+  color: var(--color-storm);
+  &--home {
+    color: var(--color-light);
+  }
+  &--home {
+    margin-bottom: 60px;
+  }
+}
+
+.btn {
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  padding: 15px 39px;
+  border-radius: 4px;
+  color: var(--color-light);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  &--fill {
+    background-color: var(--color-primary);
+  }
+  &--stroke {
+    &-light {
+      border-color: var(--color-light);
+    }
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  color: var(--color-ebony);
+  &--center {
+    text-align: center;
+  }
+}
+.descr {
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-storm);
+  &--center {
+    text-align: center;
+  }
+}
+.section-offset {
+  padding-top: 120px;
 }

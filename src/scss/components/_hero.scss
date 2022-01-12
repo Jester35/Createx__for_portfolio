@@ -1,0 +1,20 @@
+.hero {
+  padding-top: 220px;
+  padding-bottom: 355px;
+  background-image: url(/img/main-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-grey);
+
+  &__content {
+    max-width: 590px;
+  }
+  &__btns {
+    .btn {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
