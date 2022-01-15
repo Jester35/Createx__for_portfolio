@@ -57,7 +57,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
-  color: #000;
+  // color: #000;
 }
 a:hover {
   text-decoration: none;
@@ -170,6 +170,11 @@ a {
   }
 }
 
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
 .main-descr {
   line-height: 150%;
   font-size: 20px;
@@ -225,4 +230,64 @@ a {
 }
 .section-offset {
   padding-top: 120px;
+}
+
+.custom-checkbox {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-grey);
+  }
+
+  &__text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  // &__input:checked + &__text {
+  //   color: red;
+  // }
+
+  &__input:checked + &__text::before {
+    background-color: var(--color-primary);
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+
+  // &__input:focus + &__text {
+  //   outline: 2px solid var(--color-primary);
+  //   // color: blue;
+  // }
 }
