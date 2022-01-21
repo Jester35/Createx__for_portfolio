@@ -1,0 +1,42 @@
+.page-hero {
+  background: var(--color-athens);
+  padding-top: 153px;
+  padding-bottom: 79px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 600px;
+
+  &__breadcrumbs {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    max-width: 600px;
+    margin: 0;
+    letter-spacing: 1;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 130%;
+    color: var(--color-ebony);
+    margin-bottom: 23px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-storm);
+    max-width: 600px;
+  }
+
+  &--services {
+    background-image: url(../img/services-hero-bg.png);
+    background-position: right -40px center;
+  }
+
+  &--services-inner {
+    background-image: url(../img/services-inner-bg.png);
+    background-position: right -40px top;
+  }
+}

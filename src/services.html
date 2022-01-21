@@ -8,7 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Createx Construction</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
@@ -16,19 +15,12 @@
 
 <body class="page__body">
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header-secondary.html')
     <main>
-      @include('partials/hero.html')
-      @include('partials/about-section.html')
-      @include('partials/mission.html')
-      @include('partials/services-section.html')
-      @include('partials/portfolio-section.html')
-      @include('partials/partners.html')
-      @include('partials/testimonials.html')
-      @include('partials/facts.html')
-      @include('partials/recent-news.html')
+      @include('partials/hero-services.html')
+      @include('partials/services-content.html')
       @include('partials/contacts-section.html')
-    </main>
+      </main>
     @include('partials/footer.html')
   </div>
 </body>
