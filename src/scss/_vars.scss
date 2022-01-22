@@ -1,15 +1,18 @@
 // если вы хотите использовать sass-переменные - удалите root
 // colors
 :root {
-  // base
+  // color
   --color-light: #fff;
   --color-grey: #424551;
   --font-family: "Open Sans";
-  --content-width: 1170px;
+  --content-width: 1230px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --color-storm: #787a80;
   --color-ebony: #1e212c;
   --color-primary: #ff5a30;
   --color-athens: #f4f5f7;
+
+  //size
+  --grid-gap: 30px;
 }
