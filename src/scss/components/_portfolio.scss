@@ -1,0 +1,86 @@
+.portfolio {
+  position: relative;
+  padding-bottom: 119px;
+  &-more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-grey);
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 16px;
+      color: inherit;
+      fill: currentColor;
+      object-fit: cover;
+    }
+  }
+}
+
+.portfolio-tabs-nav {
+  --gap: 20px;
+  @include flex-v-center;
+  transform: translateY(-59px);
+  margin-bottom: 61px;
+  &__item {
+    width: calc((100% - (var(--gap) * 4)) / 5);
+    &:not(:last-child) {
+      margin-right: var(--gap);
+    }
+  }
+
+  &__icon {
+    margin-bottom: 17px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    color: inherit;
+    fill: currentColor;
+    // &:hover {
+    //   fill: var(--color-light);
+    // }
+  }
+
+  &__btn {
+    @include flex-column-center;
+    justify-content: center;
+    padding: 15px;
+    min-height: 154px;
+    width: 100%;
+    color: var(--color-primary);
+    background: var(--color-light);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &--active {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+      .portfolio-tabs-nav__text {
+        color: var(--color-light);
+      }
+    }
+
+    border-radius: 4px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.portfolio-tabs {
+  &__item {
+    grid-column: 4 span;
+  }
+}

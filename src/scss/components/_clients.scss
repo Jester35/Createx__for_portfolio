@@ -1,0 +1,13 @@
+.clients {
+  padding: 174px 0 120px;
+  background: var(--color-athens);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 102px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+}
