@@ -1,5 +1,5 @@
-.portfolio-section {
-  padding: 120px 0;
+.related-project {
+  padding: 180px 0 100px;
   background-color: var(--color-light);
 
   &__top {
@@ -20,7 +20,7 @@
   }
 }
 
-.portfolio-item {
+.related-item {
   display: flex;
   flex-direction: column;
   overflow: hidden;

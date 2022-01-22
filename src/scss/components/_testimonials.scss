@@ -1,5 +1,5 @@
 .testimonials {
-  padding: 100px 0 6px;
+  padding: 59px 0 6px;
   background: var(--color-athens);
 
   &__content {
@@ -7,6 +7,8 @@
   }
 
   &__image {
+    position: relative;
+    z-index: 5;
     margin-bottom: -60px;
   }
 

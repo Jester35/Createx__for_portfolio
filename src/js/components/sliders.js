@@ -21,3 +21,13 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
         prevEl: '.testimonials__prev',
     },  
 });
+
+const relatedSlider = new Swiper('.related-project__items', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    // loop: true,
+    navigation: {
+        nextEl: '.related-project__next',
+        prevEl: '.related-project__prev',
+    },  
+});

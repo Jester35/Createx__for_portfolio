@@ -1,5 +1,5 @@
 .footer {
-  padding: 80px 0;
+  padding: 71px 0;
   color: rgba(255, 255, 255, 0.6);
   background: var(--color-ebony);
 
@@ -49,7 +49,7 @@
 
   &__top {
     @include flex-v-center;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
   }
 
   &__logo {
@@ -71,7 +71,7 @@
     font-size: 24px;
     line-height: 150%;
     color: var(--color-light);
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   &__items {
