@@ -40,6 +40,7 @@
     object-fit: cover;
     color: inherit;
     fill: currentColor;
+    pointer-events: none;
     // &:hover {
     //   fill: var(--color-light);
     // }
@@ -57,6 +58,7 @@
 
     &--active {
       color: var(--color-light);
+      pointer-events: none;
       background-color: var(--color-primary);
       .portfolio-tabs-nav__text {
         color: var(--color-light);
@@ -76,11 +78,24 @@
     line-height: 160%;
     color: #9a9ca5;
     transition: color 0.3s ease-in-out;
+    pointer-events: none;
   }
 }
 
 .portfolio-tabs {
   &__item {
+    display: none;
     grid-column: 4 span;
+    &:nth-child(n + 10) {
+      display: none;
+    }
+
+    &--visible {
+      display: block;
+    }
+
+    &--visible-more {
+      display: block !important;
+    }
   }
 }
