@@ -1,0 +1,16 @@
+.work-images-slider {
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.work-images-nav {
+  overflow: hidden;
+}

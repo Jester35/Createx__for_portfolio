@@ -31,3 +31,25 @@ const relatedSlider = new Swiper('.related-project__items', {
         prevEl: '.related-project__prev',
     },  
 });
+
+const workImages = document.querySelector('.work-images-slider');
+
+if(workImages) {
+    const workSlider = new Swiper(".work-images-nav", {
+        spaceBetween: 20,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+    const workSliderNav = new Swiper(workImages, {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: workSlider,
+        },
+      });
+}

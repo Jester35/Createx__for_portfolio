@@ -3,7 +3,7 @@
   padding-top: 153px;
   padding-bottom: 79px;
   background-repeat: no-repeat;
-  background-size: contain;
+  // background-size: contain;
   min-height: 600px;
 
   &__breadcrumbs {
@@ -19,6 +19,17 @@
     line-height: 130%;
     color: var(--color-ebony);
     margin-bottom: 23px;
+    &--small {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 120%;
+      letter-spacing: 1;
+      text-transform: initial;
+    }
+
+    &--mb {
+      margin-bottom: 60px;
+    }
   }
 
   &__descr {
@@ -42,5 +53,11 @@
   &--work {
     background-image: url(../img/hero-work-bg.png);
     background-position: right -10px top;
+  }
+
+  &--work-inner {
+    background-color: var(--color-light);
+    background-image: url(../img/work-inner-bg.png);
+    background-position: right -10px top 48px;
   }
 }
