@@ -32,24 +32,43 @@ const relatedSlider = new Swiper('.related-project__items', {
     },  
 });
 
-const workImages = document.querySelector('.work-images-slider');
+// const workImages = document.querySelector('.work-images-slider');
+// const workImagesNav = document.querySelector('.work-images-nav');
 
-if(workImages) {
-    const workSlider = new Swiper(".work-images-nav", {
-        spaceBetween: 20,
-        slidesPerView: 10,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-    const workSliderNav = new Swiper(workImages, {
-        spaceBetween: 20,
-        slidesPerView: 1,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: workSlider,
-        },
-      });
-}
+// if(workImages) {
+//     const workSliderNav = new Swiper(workImagesNav, {
+//         slidesPerView: 10,
+//         spaceBetween: 20,
+//         freeMode: true,
+//         watchSlidesProgress: true,
+//       });
+//     const workSlider = new Swiper(workImages, {
+//         slidesPerView: 1,
+//         spaceBetween: 20,
+//         navigation: {
+//           nextEl: ".work-images__next",
+//           prevEl: ".work-images__prev",
+//         },
+//         thumbs: {
+//           swiper: workSliderNav,
+//         },
+//       });
+// };
+
+var galleryThumbs = new Swiper('.work-images-nav', {
+    spaceBetween: 20,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
+  var galleryTop = new Swiper('.work-images-slider', {
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.work-images__next',
+      prevEl: '.work-images__prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
