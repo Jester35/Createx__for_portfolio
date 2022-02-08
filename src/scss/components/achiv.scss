@@ -1,0 +1,41 @@
+.achiv {
+  padding: 120px 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 span;
+    padding-top: 70px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    &--reccom {
+      background-image: url(/img/about-like.svg);
+    }
+    &--apart {
+      background-image: url(/img/about-paint.svg);
+    }
+    &--specialist {
+      background-image: url(/img/about-helm.svg);
+    }
+    &--finish {
+      background-image: url(/img/about-pant.svg);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-ebony);
+    padding-top: 7px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-primary);
+  }
+}

@@ -13,6 +13,7 @@
   &__title {
     max-width: 600px;
     margin: 0;
+    text-transform: uppercase;
     letter-spacing: 1;
     font-weight: 700;
     font-size: 72px;
@@ -59,5 +60,12 @@
     background-color: var(--color-light);
     background-image: url(../img/work-inner-bg.png);
     background-position: right -10px top 48px;
+  }
+
+  &--about {
+    background: var(--color-athens);
+    background-image: url(../img/hero-about-bg.png);
+    background-repeat: no-repeat;
+    background-position: right -10px top;
   }
 }
