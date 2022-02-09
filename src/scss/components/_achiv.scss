@@ -1,0 +1,117 @@
+.achiv {
+  padding: 120px 0;
+  background-image: url(../img/achiv-bg.png);
+  background-repeat: no-repeat;
+  background-position: right -10px bottom -528px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 span;
+    padding-top: 70px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    &--reccom {
+      background-image: url(/img/about-like.svg);
+    }
+    &--apart {
+      background-image: url(/img/about-paint.svg);
+    }
+    &--specialist {
+      background-image: url(/img/about-helm.svg);
+    }
+    &--finish {
+      background-image: url(/img/about-pant.svg);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-ebony);
+    padding-top: 7px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-primary);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    p {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 261px;
+  }
+
+  &__info {
+    position: relative;
+    background: var(--color-light);
+    width: 735px;
+    flex-shrink: 0;
+    top: -130px;
+    left: -29px;
+    padding: 80px;
+    padding-bottom: 20px;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+      0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  }
+}
+.quote {
+  padding: 10px 13px 25px 54px;
+  &__content {
+    position: relative;
+    margin-bottom: 42px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -58px;
+      top: 0;
+      width: 28px;
+      height: 20px;
+      background-image: url(/img/braces.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__footer {
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+    background-image: url(../img/signature.svg);
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 100px 68px;
+  }
+
+  &__author {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+  }
+}

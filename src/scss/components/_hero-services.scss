@@ -68,4 +68,11 @@
     background-repeat: no-repeat;
     background-position: right -10px top;
   }
+
+  &--positions {
+    background: var(--color-athens);
+    background-image: url(../img/positions-man-bg.png);
+    background-position: right -10px bottom;
+    background-repeat: no-repeat;
+  }
 }

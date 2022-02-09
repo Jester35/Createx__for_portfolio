@@ -55,14 +55,14 @@ const relatedSlider = new Swiper('.related-project__items', {
 //       });
 // };
 
-var galleryThumbs = new Swiper('.work-images-nav', {
+const galleryThumbs = new Swiper('.work-images-nav', {
     spaceBetween: 20,
     slidesPerView: 10,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
-  });
-  var galleryTop = new Swiper('.work-images-slider', {
+});
+const galleryTop = new Swiper('.work-images-slider', {
     spaceBetween: 20,
     navigation: {
       nextEl: '.work-images__next',
@@ -71,4 +71,47 @@ var galleryThumbs = new Swiper('.work-images-nav', {
     thumbs: {
       swiper: galleryThumbs
     }
+});
+
+
+const historySlider = document.querySelector('.history-slider');
+
+if(historySlider) {
+const workSlider = new Swiper(historySlider, {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.history__next',
+      prevEl: '.history__prev',
+    },
   });
+
+  workSlider.on('slideChange', function () {
+    console.log(workSlider.realIndex);
+
+    historyBtns.forEach(el => {
+      el.classList.remove('history-nav__btn--active');
+    });
+
+    document.querySelector(`.history-nav__btn[data-index="${workSlider.realIndex}"]`).classList.add('history-nav__btn--active');
+
+  });
+
+  const historyBtns = document.querySelectorAll('.history-nav__btn');
+
+  historyBtns.forEach((el, idx) => {
+    el.setAttribute('data-index', idx);
+
+    el.addEventListener('click', (e) => {
+      const index = e.currentTarget.dataset.index;
+
+      historyBtns.forEach(el => {
+        el.classList.remove('history-nav__btn--active');
+      });
+
+      e.currentTarget.classList.add('history-nav__btn--active');
+
+      workSlider.slideTo(index);
+    });
+  });
+}

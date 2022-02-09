@@ -1,0 +1,117 @@
+.positions-content {
+  padding-top: 120px;
+  padding-bottom: 94px;
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 5 span;
+  }
+}
+
+.positions-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  background: var(--color-light);
+  border: 1px solid #e5e8ed;
+  box-sizing: border-box;
+  border-radius: 4px;
+  &__link {
+    display: inline-block;
+  }
+
+  &__meta {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0 32px;
+  }
+
+  &__city {
+    padding-left: 23px;
+    background-image: url(../img/city.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+
+  &__time {
+    position: relative;
+    padding-left: 23px;
+    margin-left: 20px;
+    background-image: url(../img/time.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -11px;
+      width: 1px;
+      height: 11px;
+      background-color: currentColor;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.positions-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.positions-looking {
+  width: 390px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--color-ebony);
+  }
+
+  &__descr {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-grey);
+    margin-bottom: 49px;
+  }
+
+  &__btns {
+    &--left {
+      padding: 15px 44px;
+      margin-right: 20px;
+    }
+
+    &--right {
+      padding: 15px 54px;
+    }
+  }
+}
