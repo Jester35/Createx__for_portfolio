@@ -1,0 +1,85 @@
+.contacts {
+  padding-top: 121px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+  }
+
+  &__image {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+}
+
+.form-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  align-items: baseline;
+
+  &__field {
+    width: 47.5%;
+
+    .form-field__caption {
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-grey);
+    }
+
+    .form-field__input {
+      height: 52px;
+      font-size: 16px;
+      line-height: 160%;
+      color: #9a9ca5;
+    }
+  }
+
+  .choices {
+    width: 100%;
+
+    &__inner {
+      height: 52px;
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-athens);
+      border: 1px solid #d7dadd;
+      border-radius: 4px;
+    }
+
+    &__placeholder {
+      opacity: 1;
+      font-size: 16px;
+      line-height: 160%;
+      color: #9a9ca5;
+    }
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+  .choices__list--single {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .choices[data-type*="select-one"]::after {
+    border: none;
+    top: 20px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/angle-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
