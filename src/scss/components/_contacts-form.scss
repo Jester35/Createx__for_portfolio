@@ -1,9 +1,11 @@
 .contacts {
   padding-top: 121px;
+  padding-bottom: 118px;
 
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   &__image {
@@ -20,10 +22,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 600px;
-  align-items: baseline;
+  align-items: flex-start;
+
+  &__radio {
+    .custom-radio__text {
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-grey);
+      margin-left: 12px;
+      margin-right: 24px;
+      &--viber {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__checkbox {
+    max-width: 315px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    .btn-wrapper {
+      flex-shrink: 0;
+    }
+  }
 
   &__field {
     width: 47.5%;
+    margin-bottom: 27px;
 
     .form-field__caption {
       font-size: 16px;
@@ -36,6 +66,26 @@
       font-size: 16px;
       line-height: 160%;
       color: #9a9ca5;
+      &--big {
+        height: 128px;
+        padding-top: 15px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &--big {
+      width: 100%;
+    }
+  }
+
+  &__fields {
+    width: 47.5%;
+    padding: 0;
+    .form-field__caption {
+      font-size: 16px;
+      line-height: 160%;
+      color: #424551;
+      margin-bottom: 20px;
     }
   }
 
@@ -70,10 +120,15 @@
     height: 100%;
     align-items: center;
     padding-left: 15px;
+    .choices__item {
+      color: #9a9ca5;
+    }
   }
   .choices[data-type*="select-one"]::after {
     border: none;
-    top: 20px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 0;
     right: 16px;
     width: 20px;
     height: 20px;
@@ -81,5 +136,24 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  .choices[data-type*="select-one"].is-open::after {
+    margin-top: -16px;
+    transform: rotate(180deg) translateY(-50%);
+  }
+
+  .choices__list--dropdown .choices__item {
+    opacity: 1;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
+  }
+}
+.custom-checkbox {
+  &__text {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-grey);
   }
 }
