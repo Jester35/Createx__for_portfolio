@@ -109,6 +109,11 @@
     }
   }
 
+  .is-focused {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+
   .choices__list--dropdown .choices__item--selectable::after {
     display: none;
   }

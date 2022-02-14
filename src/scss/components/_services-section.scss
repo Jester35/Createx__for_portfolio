@@ -1,5 +1,5 @@
 .services-section {
-  padding-top: 212px;
+  padding-top: 215px;
   padding-bottom: 80px;
   background-image: url(../img/services-bg.jpg);
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   }
 
   &__list {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 }
 
@@ -37,6 +37,11 @@
     0px 4px 4px -4px rgba(30, 33, 44, 0.03);
   background: var(--color-light);
   padding: 92px 10px;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
 
   &::before {
     content: "";

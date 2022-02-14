@@ -54,6 +54,10 @@
 
   &__logo {
     margin-right: 60px;
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
   }
 
   &__descr {
@@ -128,6 +132,20 @@
 
     a {
       color: inherit;
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-light);
+      }
+
+      &:active {
+        color: var(--color-light);
+      }
     }
   }
 
@@ -156,5 +174,19 @@
     font-size: 16px;
     line-height: 160%;
     color: inherit;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+    }
+
+    &:active {
+      color: var(--color-light);
+    }
   }
 }

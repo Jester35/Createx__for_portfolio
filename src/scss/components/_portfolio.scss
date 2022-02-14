@@ -9,6 +9,20 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-grey);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
     svg {
       width: 24px;
       height: 24px;
@@ -56,6 +70,19 @@
     background: var(--color-light);
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       color: var(--color-light);
       pointer-events: none;
@@ -93,6 +120,14 @@
 
     &--visible-more {
       display: block !important;
+    }
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
     }
   }
 }
