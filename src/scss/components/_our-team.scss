@@ -7,18 +7,54 @@
     margin-bottom: 60px;
   }
 
+  &__list {
+    column-gap: var(--grid-gap);
+    row-gap: 60px;
+    margin-bottom: 79px;
+  }
+
   &__title {
     margin-bottom: 24px;
   }
 
   &__item {
     grid-column: 3 span;
+    &:hover {
+      .our-team__social {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    margin-bottom: 17px;
+  }
+
+  &__social {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#ff5a30, 0.7);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
 
   &__link {
     display: block;
     width: 20px;
     height: 20px;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
 
     svg {
       display: block;
@@ -45,15 +81,12 @@
     text-align: center;
   }
 
-  &__image {
-    margin-bottom: 16px;
-  }
-
   &__text {
     font-size: 18px;
     line-height: 150%;
     text-align: center;
     color: var(--color-ebony);
+    margin-bottom: 60px;
 
     a {
       color: var(--color-primary);

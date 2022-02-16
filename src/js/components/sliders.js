@@ -1,6 +1,8 @@
 // import _vars from "../_vars";
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation]);
+Swiper.use([Pagination]);
+Swiper.use([Autoplay]);
 const slider = new Swiper('.portfolio-section__items', {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -115,3 +117,36 @@ const workSlider = new Swiper(historySlider, {
     });
   });
 }
+
+const heroSliderSpeed = 1500;
+
+const bodyStyles = window.getComputedStyle(document.body);
+const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed');
+
+document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
+
+const heroSlider = new Swiper('.hero-slider', {
+  slidesPerView: 1,
+  navigation: {
+      nextEl: '.hero__next',
+      prevEl: '.hero__prev',
+  },
+  speed: heroSliderSpeed,
+  // autoplay: {
+  //   delay: 1500,
+  // },
+  pagination: {
+    el: '.hero__pag',
+    type: 'bullets',
+    clickable: true,
+  },
+  on: {
+    init: function () {
+      const paginationBullets = document.querySelectorAll ('.hero__pag .swiper-pagination-bullet');
+
+      paginationBullets.forEach(el => {
+        el.innerHTML = `<span class="hero__bar"></span>`
+      })
+    },
+  },
+});

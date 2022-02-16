@@ -54,7 +54,8 @@
   }
 
   &__btn {
-    display: none;
+    display: inline-block;
+    margin-bottom: -67px;
     margin-top: 24px;
     padding: 13px 32px;
     font-weight: 700;
@@ -64,5 +65,14 @@
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
     border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    will-change: margin;
+  }
+
+  &:hover {
+    .portfolio-item__btn {
+      display: inline-block;
+      margin-bottom: 0;
+    }
   }
 }
