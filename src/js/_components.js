@@ -4,5 +4,8 @@ import '../js/components/accordions';
 import '../js/components/portfolio-tabs';
 import '../js/components/selects';
 import '../js/components/video';
+import '../js/components/to-top';
+import '../js/components/modals';
+// import '../js/components/scroll_top';
 // import '../js/components/secondslider';
 // console.log('components');
