@@ -1,15 +1,29 @@
 .testimonials {
   padding: 59px 0 6px;
   background: var(--color-athens);
+  @include tablet {
+    padding: 15px 0;
+  }
 
   &__content {
     max-width: 612px;
+    @include mini-desktop {
+      max-width: 500px;
+     }
+     @include tablet {
+      max-width: initial;
+    }
   }
 
   &__image {
     position: relative;
     z-index: 5;
     margin-bottom: -60px;
+    @include tablet {
+      width: 75%;
+      margin: 0 auto;
+      margin-bottom: -60px;
+    }
   }
 
   &__title {
@@ -25,11 +39,18 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    @include tablet {
+      right: 4px;
+      bottom: 4px;
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+    }
   }
 }
 

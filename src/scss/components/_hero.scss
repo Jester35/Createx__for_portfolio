@@ -1,6 +1,9 @@
 .hero {
   &__content {
     max-width: 590px;
+    @include tablet {
+      max-width: 525px;
+    }
   }
   &__btns {
     .btn {
@@ -25,6 +28,10 @@
       opacity: 1;
       text-align: left;
 
+      @include tablet {
+        width: 120px;
+      }
+
       &::before {
         counter-increment: pag;
         content: "0" counter(pag);
@@ -33,11 +40,17 @@
         line-height: 150%;
         color: rgba(#fff, 0.4);
         transition: color 0.3s ease-in-out;
+        @include tablet {
+          font-size: 22px;
+        }
       }
 
       &::after {
         display: none;
       }
+    }
+    @include tablet {
+      left: calc((100% - 750px) / 2) !important;
     }
   }
 
@@ -107,4 +120,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--color-grey);
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 230px;
+  }
 }

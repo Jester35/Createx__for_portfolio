@@ -17,6 +17,11 @@
     height: 48px;
     color: var(--color-grey);
     transition: background-color 0.3s ease-in-out;
+    @include tablet {
+      width: 37px;
+      height: 37px;
+      margin-right: 5px;
+    }
 
     svg {
       display: block;
@@ -25,12 +30,17 @@
       color: inherit;
       fill: currentColor;
       object-fit: cover;
+      @include tablet {
+        width: 21px;
+        height: 21px;
+      }
     }
 
     &:hover {
       background-color: var(--color-primary);
       color: var(--color-light);
     }
+    
   }
 }
 

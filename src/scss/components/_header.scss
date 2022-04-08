@@ -16,5 +16,14 @@
       outline: 2px solid var(--color-primary);
       outline-offset: 2px;
     }
+    @include mini-desktop {
+      width: 100px;
+    }
+    @include tablet {
+      width: 90px;
+    }
+  }
+  @include tablet {
+    padding: 15px 0;
   }
 }

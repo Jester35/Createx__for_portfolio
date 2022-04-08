@@ -7,6 +7,9 @@
     align-items: flex-start;
     &:not(:last-child) {
       margin-right: 35px;
+      @include tablet {
+        margin-right: 15px;
+      }
     }
   }
 }
@@ -27,6 +30,12 @@
     line-height: 150%;
     color: var(--color-ebony);
     transition: color 0.3s ease-in-out;
+    @include mini-desktop {
+     font-size: 16px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
 
     &:hover {
       color: var(--color-primary);
@@ -47,5 +56,9 @@
   }
   &--mail {
     background-image: url(../img/chat.svg);
+  }
+  @include tablet {
+    background-size: 30px 30px;
+    padding-left: 35px;
   }
 }

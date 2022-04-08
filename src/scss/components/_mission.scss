@@ -5,6 +5,9 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--mission-gap) * 2);
+    @include mini-desktop {
+      gap: 50px;
+     }
   }
 
   &__item {
@@ -29,6 +32,9 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        @include mini-desktop {
+          right: -26px;
+         }
       }
     }
   }

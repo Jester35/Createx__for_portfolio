@@ -18,6 +18,9 @@
     font-size: 14px;
     line-height: 150%;
     padding-left: 15px;
+    @include tablet {
+      width: auto;
+    }
 
     &:focus {
       outline: 2px solid var(--color-primary);

@@ -5,6 +5,9 @@
   &__item {
     &:not(:last-child) {
       margin-right: 40px;
+      @include tablet {
+        margin-right: 20px;
+       }
     }
   }
   &__link {
@@ -13,6 +16,10 @@
     line-height: 160%;
     color: var(--color-grey);
     transition: color 0.3s ease-in-out;
+
+    @include tablet {
+      font-size: 14px;
+    }
 
     &:focus {
       outline: 2px solid var(--color-primary);

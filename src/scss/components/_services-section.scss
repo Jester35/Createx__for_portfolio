@@ -18,6 +18,10 @@
   &__list {
     margin-bottom: 72px;
   }
+
+  @include tablet {
+    padding-top: 150px;
+  }
 }
 
 .services-list {
@@ -37,6 +41,10 @@
     0px 4px 4px -4px rgba(30, 33, 44, 0.03);
   background: var(--color-light);
   padding: 92px 10px;
+
+  @include tablet {
+    padding: 70px 5px;
+  }
 
   &:focus {
     outline: 2px solid var(--color-primary);
@@ -58,6 +66,9 @@
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    @include tablet {
+      background-size: cover;
+    }
   }
 
   &::after {
@@ -90,6 +101,11 @@
     object-fit: cover;
     fill: var(--color-primary);
     transition: fill 0.3s ease-in-out;
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -98,6 +114,9 @@
     line-height: 150%;
     color: var(--color-ebony);
     transition: color 0.3s ease-in-out;
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   &:hover {

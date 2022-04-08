@@ -147,6 +147,9 @@
         color: var(--color-light);
       }
     }
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
   &__name {

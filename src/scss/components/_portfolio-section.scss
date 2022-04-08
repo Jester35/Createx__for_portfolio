@@ -1,6 +1,9 @@
 .portfolio-section {
   padding: 120px 0;
   background-color: var(--color-light);
+  @include tablet {
+    padding: 80px 0;
+  }
 
   &__top {
     display: flex;

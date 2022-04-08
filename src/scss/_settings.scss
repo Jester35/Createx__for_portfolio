@@ -168,6 +168,9 @@ a {
   &--home {
     color: var(--color-light);
   }
+  @include tablet {
+    font-size: 52px;
+  }
 }
 
 .centered {
@@ -185,6 +188,9 @@ a {
   &--home {
     margin-bottom: 60px;
   }
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .btn {
@@ -200,6 +206,11 @@ a {
   line-height: 20px;
   letter-spacing: 0.5px;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  @include tablet {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
 
   &--fill {
     background-color: var(--color-primary);
@@ -251,6 +262,10 @@ a {
   &--center {
     text-align: center;
   }
+  @include tablet {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
 }
 .descr {
   margin-bottom: 60px;
@@ -260,9 +275,16 @@ a {
   &--center {
     text-align: center;
   }
+  @include tablet {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
 }
 .section-offset {
   padding-top: 120px;
+  @include tablet {
+    padding-top: 40px;
+  }
 }
 
 .custom-checkbox {
@@ -323,6 +345,32 @@ a {
   //   outline: 2px solid var(--color-primary);
   //   // color: blue;
   // }
+}
+
+.custom-file {
+  cursor: pointer;
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    font-size: 14px;
+    line-height: 170%;
+    color: var(--color-grey);
+    background-image: url("../img/file-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+  }
+
+  &__input:focus + &__text {
+    outline: 2px solid var(--color-primary);
+    // color: blue;
+  }
 }
 .grid {
   display: grid;
@@ -407,5 +455,71 @@ a {
   &__btn {
     margin-top: 20px;
     width: 100%;
+  }
+
+  .choices {
+    width: 100%;
+
+    &__inner {
+      height: 52px;
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-athens);
+      border: 1px solid #d7dadd;
+      border-radius: 4px;
+    }
+
+    &__placeholder {
+      opacity: 1;
+      font-size: 16px;
+      line-height: 160%;
+      color: #9a9ca5;
+    }
+  }
+
+  .is-focused {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+
+  .choices__list--dropdown .choices__item--selectable::after {
+    display: none;
+  }
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+  .choices__list--single {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-left: 15px;
+    .choices__item {
+      color: #9a9ca5;
+    }
+  }
+  .choices[data-type*="select-one"]::after {
+    border: none;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 0;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/angle-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .choices[data-type*="select-one"].is-open::after {
+    margin-top: -16px;
+    transform: rotate(180deg) translateY(-50%);
+  }
+
+  .choices__list--dropdown .choices__item {
+    opacity: 1;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9a9ca5;
   }
 }
