@@ -12,6 +12,9 @@
       }
     }
   }
+  @include tablet {
+    display: none;
+  }
 }
 .contacts-link {
   background-position: left center;

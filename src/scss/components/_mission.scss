@@ -8,6 +8,9 @@
     @include mini-desktop {
       gap: 50px;
      }
+     @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {

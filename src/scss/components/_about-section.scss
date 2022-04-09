@@ -6,4 +6,7 @@
     padding-bottom: 40px;
     padding-top: 50px;
   }
+  @include mobile {
+    padding: 25px 0;
+  }
 }

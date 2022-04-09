@@ -4,6 +4,13 @@
     margin-bottom: 13px;
   }
 
+  &__image {
+    @include small-tablet {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__link {
     font-weight: 700;
     font-size: 20px;
@@ -29,15 +36,15 @@
   }
 
   &--small {
-    .recent-article__descr {
+    .news-article__descr {
       display: none;
     }
 
-    .recent-article__text {
+    .news-article__text {
       padding: 12px 24px;
     }
 
-    .recent-article__title {
+    .news-article__title {
       margin-bottom: 9px;
     }
   }

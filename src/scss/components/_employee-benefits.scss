@@ -78,6 +78,10 @@
     font-size: 28px;
     line-height: 150%;
     color: var(--color-ebony);
+    @include mobile {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__content {
@@ -99,5 +103,8 @@
 
   &__btn {
     padding: 11px 29px;
+  }
+  @include mobile {
+    padding: 10px 20px;
   }
 }

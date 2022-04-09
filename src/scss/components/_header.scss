@@ -17,10 +17,10 @@
       outline-offset: 2px;
     }
     @include mini-desktop {
-      width: 100px;
+      max-width: 100px;
     }
     @include tablet {
-      width: 90px;
+      max-width: none;
     }
   }
   @include tablet {

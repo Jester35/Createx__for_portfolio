@@ -11,6 +11,14 @@
     }
   }
 
+  &__item {
+    display: flex;
+    justify-content: center;
+    @include small-tablet {
+      grid-column: 3 span;
+    }
+  }
+
   &__title {
     margin-bottom: 60px;
   }
