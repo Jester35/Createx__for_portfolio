@@ -47,5 +47,8 @@
       outline-offset: 2px;
     }
   }
-  
+
+  @include mobile {
+    padding: 40px 0 70px;
+  }
 }

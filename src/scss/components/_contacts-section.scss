@@ -43,6 +43,11 @@
     @include mini-desktop {
       font-size: 24px;
      }
+     @include mobile {
+       font-size: 20px;
+       line-height: 30px;
+       margin-bottom: 8px;
+     }
   }
 
   &__field {
@@ -65,5 +70,9 @@
   @include mini-desktop {
     max-width: 400px;
     padding: 20px 26px;
+   }
+   @include mobile {
+     max-width: 270px;
+     padding: 14px 15px;
    }
 }

@@ -8,6 +8,9 @@
     grid-template-rows: repeat(2, 255px);
     grid-gap: 30px;
     margin-bottom: 80px;
+    @include mobile {
+      grid-gap: 25px;
+    }
   }
 
   &__item {

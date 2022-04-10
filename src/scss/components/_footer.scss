@@ -7,16 +7,26 @@
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(12, 1fr);
+    @include tablet {
+      gap: 20px;
+    }
   }
 
   &__left {
     display: flex;
     flex-wrap: wrap;
     grid-column: 7 span;
+    @include tablet {
+      grid-column: 12 span;
+    }
   }
 
   &__form {
     grid-column: 5 span;
+    @include tablet {
+      grid-column: 12 span;
+      max-width: 760px;
+    }
   }
 
   &__address {
@@ -58,6 +68,9 @@
       outline: 2px solid var(--color-primary);
       outline-offset: 2px;
     }
+    @include tablet {
+      margin-right: 30px;
+    }
   }
 
   &__descr {
@@ -66,6 +79,9 @@
     max-width: 495px;
     font-size: 14px;
     line-height: 150%;
+    @include tablet {
+      max-width: 760px;
+    }
   }
 }
 

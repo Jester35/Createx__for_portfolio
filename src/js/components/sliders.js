@@ -4,20 +4,22 @@ Swiper.use([Navigation]);
 Swiper.use([Pagination]);
 Swiper.use([Autoplay]);
 const slider = new Swiper('.portfolio-section__items', {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 30,
     // loop: true,
+    breakpoints: {
+      576: {
+        slidersPerView: 2,
+        spaceBetween: 30
+      },
+      768: {
+        slidersPerView: 3,
+        spaceBetween: 30
+      },
+    },
     navigation: {
         nextEl: '.portfolio-section__next',
         prevEl: '.portfolio-section__prev',
-    },
-    breakpoints: {
-      576: {
-        slidersPerView: 2
-      },
-      768: {
-        slidersPerView: 3
-      },
     },  
 });
 
